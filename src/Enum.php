@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace Tdx;
 
 use Illuminate\Support\Collection;
 use \Illuminate\Support\Str;
