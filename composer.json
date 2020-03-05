@@ -2,7 +2,7 @@
     "name": "tdx996/php-enum",
     "description": "A basic implementation of a php Enum.",
     "keywords": ["enum", "php"],
-    "license": "DBAD",
+    "license": "0BSD",
     "authors": [
         {
             "name": "Tadej Hribar",
