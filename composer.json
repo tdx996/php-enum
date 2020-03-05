@@ -1,15 +1,15 @@
 {
-    "name": "buonzz/composer-library-template",
-    "description": "Boilerplate package for creating other packages.",
-    "keywords": ["template", "composer", "package"],
+    "name": "tdx996/php-enum",
+    "description": "A basic implementation of a php Enum.",
+    "keywords": ["enum", "php"],
     "license": "DBAD",
     "authors": [
         {
-            "name": "Darwin Biler",
-            "email": "buonzz@gmail.com"
+            "name": "Tadej Hribar",
+            "email": "tadej.996@gmail.com"
         }
     ],
-    "type": "project",
+    "type": "library",
     "require": {
 		"php": ">=7.3",
         "illuminate/support": "^7.0"
