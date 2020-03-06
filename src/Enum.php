@@ -53,8 +53,5 @@ class Enum {
         return $translated;
     }
 
-    protected static function translation(string $translationKey) : string {
-        // TODO: Use the translation library to generate a translation
-        return $translationKey;
-    }
+    protected abstract static function translation(string $translationKey) : string;
 }
