@@ -3,7 +3,7 @@
 use Illuminate\Support\Collection;
 use \Illuminate\Support\Str;
 
-class Enum {
+abstract class Enum {
     public static function exists($key) : bool {
         return in_array($key, static::values());
     }
