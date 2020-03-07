@@ -44,15 +44,16 @@ abstract class Enum {
         return (new \ReflectionClass(static::class))->getConstants();
     }
 
-    public static function translated($defaultOption = null) : Collection {
+    public static function translated($defaultOption = null) : array {
         $translationPrefix = Str::snake(static::className());
         $translatedDefaultOption = static::translation("$translationPrefix.all");
 
-        $translated = static::collectValues()->map(function($enumKey) use ($translationPrefix) {
-            return static::translation("$translationPrefix.$enumKey");
-        });
+        $translated = [];
+        foreach (static::toArray() as $enumKey) {
+            $translated[$enumKey] =  static::translation("$translationPrefix.$enumKey");
+        }
 
-        return $defaultOption ? $translated->prepend($translatedDefaultOption) : $translated;
+        return $defaultOption ? ['' => $translatedDefaultOption] + $translated : $translated;
     }
 
     protected abstract static function translation(string $translationKey) : string;
