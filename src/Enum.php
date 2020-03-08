@@ -53,7 +53,7 @@ abstract class Enum {
             $translated[$enumKey] =  static::translation("$translationPrefix.$enumKey");
         }
 
-        return $defaultOption ? ['' => $translatedDefaultOption] + $translated : $translated;
+        return $defaultOption ? [0 => $translatedDefaultOption] + $translated : $translated;
     }
 
     protected abstract static function translation(string $translationKey) : string;
