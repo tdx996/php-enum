@@ -32,6 +32,10 @@ abstract class Enum {
         return array_values(static::toArray());
     }
 
+    public static function isValid($enum) : bool {
+        return in_array($enum, self::values());
+    }
+
     public static function toInvertedArray() : array {
         $invertedList = [];
         foreach (static::toArray() as $constKey => $constValue) {
