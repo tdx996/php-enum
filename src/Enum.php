@@ -1,5 +1,6 @@
 <?php namespace Tdx;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use \Illuminate\Support\Str;
 
@@ -17,7 +18,7 @@ abstract class Enum {
     }
 
     public static function className() : string {
-        return array_last(explode('\\', static::class));
+        return Arr::last(explode('\\', static::class));
     }
 
     public static function collectValues() : Collection {
